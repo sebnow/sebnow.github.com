@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml; charset=utf-8"/>
+	<title>Sebastian Nowicki</title>
+	<script type="text/javascript" charset="utf-8" src="js/vendor/jquery.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/vendor/jquery.tweet.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#javascript-fallback').remove();
+			$('#tweets').tweet({
+				username: "sebnow",
+				count: 5
+			});
+			
+			function update_repositories(json) {
+				$.each(json.user.repositories, function(i, repo) {
+					var a = $("<a>").attr("href", repo.url).text(repo.name);
+					a.appendTo("#github-repositories").wrap("<li></li>");
+				});
+			}
+			$.getJSON("http://github.com/api/v1/json/sebnow?callback=?", update_repositories);
+		});
+	</script>
+	<style type="text/css" media="screen">
+		#right-column {
+			float: right;
+			width:200px;
+		}
+		#content {
+			margin: 0px auto;
+			max-width:940px;
+		}
+	</style>
+</head>
+
+<body>
+<div id="content">
+	<h1>Sebastian Nowicki</h1>
+	<p id="javascript-fallback">Javascript must be enabled for this page to function properly</p>
+	<div id="twitter">
+		<h2>Twitter Updates</h2>
+		<div id="tweets"></div>
+	</div>
+	<div id="projects">
+		<h2>Projects</h2>
+		<ul id="github-repositories"></ul>
+	</div>
+</div>
+</body>
+</html>
