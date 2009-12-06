@@ -1,2 +1,7 @@
 destination: ./_site
 permalink: /:year/:month/:day/:title
+
+author:
+    name: Sebastian Nowicki
+
+description: "A bloggy blog."
