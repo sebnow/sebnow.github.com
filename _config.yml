@@ -6,3 +6,5 @@ author: Sebastian Nowicki
 description: "A bloggy blog."
 
 theme: minima
+disqus:
+    shortname: sebastiannowicki
