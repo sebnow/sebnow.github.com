@@ -2,8 +2,7 @@ destination: ./_site
 permalink: /:year/:month/:day/:title
 
 author: Sebastian Nowicki
-
-description: "A bloggy blog."
+description: "Thoughts about junk and stuff, or, whatever."
 
 theme: minima
 disqus:
