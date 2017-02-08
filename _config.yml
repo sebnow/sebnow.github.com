@@ -8,3 +8,4 @@ description: "A bloggy blog."
 theme: minima
 disqus:
     shortname: sebastiannowicki
+google_analytics: UA-29698241-2
