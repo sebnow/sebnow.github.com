@@ -5,3 +5,5 @@ author:
     name: Sebastian Nowicki
 
 description: "A bloggy blog."
+
+theme: jekyll-theme-cayman
