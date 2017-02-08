@@ -1,9 +1,8 @@
 destination: ./_site
 permalink: /:year/:month/:day/:title
 
-author:
-    name: Sebastian Nowicki
+author: Sebastian Nowicki
 
 description: "A bloggy blog."
 
-theme: jekyll-theme-cayman
+theme: minima
