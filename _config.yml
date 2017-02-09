@@ -4,6 +4,8 @@ url: http://blog.sebnow.co
 
 author: Sebastian Nowicki
 description: "Thoughts about junk and stuff, or, whatever."
+github_username: sebnow
+twitter_username: sebnow
 
 theme: minima
 disqus:
