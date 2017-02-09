@@ -1,5 +1,6 @@
 destination: ./_site
 permalink: /:year/:month/:day/:title
+url: http://blog.sebnow.co
 
 author: Sebastian Nowicki
 description: "Thoughts about junk and stuff, or, whatever."
@@ -8,3 +9,6 @@ theme: minima
 disqus:
     shortname: sebastiannowicki
 google_analytics: UA-29698241-2
+
+gems:
+    - jekyll-feed
