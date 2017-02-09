@@ -14,3 +14,4 @@ google_analytics: UA-29698241-2
 
 gems:
     - jekyll-feed
+    - jekyll-sitemap
