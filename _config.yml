@@ -1,5 +1,5 @@
 destination: ./_site
-permalink: /:year/:month/:day/:title
+permalink: /posts/:year/:month/:day/:title
 url: http://blog.sebnow.co
 
 author: Sebastian Nowicki
