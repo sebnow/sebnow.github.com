@@ -2,6 +2,7 @@ destination: ./_site
 permalink: /posts/:year/:month/:day/:title
 url: http://blog.sebnow.co
 
+title: "Sebastian Nowicki's Blog"
 author: Sebastian Nowicki
 description: "Thoughts about junk and stuff, or, whatever."
 github_username: sebnow
