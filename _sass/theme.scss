@@ -1,0 +1,35 @@
+$heading-font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: "Playfair Display", "Droid Serif", serif;
+$monospace-font-family: "Inconsolata", monospace;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #282a2e !default;
+$background-color: #f5f5f5 !default;
+$secondary-color:  #b5bd68 !default;
+$brand-color:      #81a2be !default;
+$secondary-background-color: #282a2e !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$content-width:    800px !default;
+
+$on-mobile:        480px !default;
+$on-tablet:        768px !default;
+
+@mixin media-query($device) {
+	@media screen and (max-width: $device) {
+		@content;
+	}
+}
+
+@import "theme/base";
+@import "theme/layout";
+@import "theme/syntax-highlighting";
+
