@@ -1,0 +1,60 @@
+#header, main.page-content, footer {
+	margin-bottom: $spacing-unit;
+}
+
+#header {
+	width: 100%;
+
+	font-size: 125%;
+    background-color: $secondary-background-color;
+
+	box-shadow: 0px 0px $spacing-unit/2 $spacing-unit/10 ;
+	box-shadow: 0px 1px 3px rgba(darken($secondary-background-color, 10%), 12%);
+
+	.home {
+		display: inline-block;
+		padding: $spacing-unit;
+		margin-left: $spacing-unit * 4;
+	}
+
+
+	.home, a .home {
+		color: $brand-color;
+		text-transform: uppercase;
+		font-family: $monospace-font-family;
+	}
+
+	.section {
+		color: $secondary-color;
+	}
+}
+
+main.page-content {
+	width: $content-width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+footer {
+	width: $content-width;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
+	ul.social-links li {
+		display: inline-block;
+		margin-left: $spacing-unit;
+	}
+}
+
+.post-list {
+	list-style-type: none;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.post-list .post-meta {
+	float: right;
+	margin-top: $base-font-size / 2;
+	color: lighten($text-color, 50%);
+}

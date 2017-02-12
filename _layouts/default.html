@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<link href="{{ page.url | replace:'index.html','' | absolute_url }}" rel="canonical" />
+	<link href="//brick.a.ssl.fastly.net/Playfair+Display:400,700/Raleway:400,400i,700" rel="stylesheet" />
+	<link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU"
+		crossorigin="anonymous" />
+	<link title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}" type="application/rss+xml" rel="alternate" />
+	<link href="{{ "/assets/main.css" | relative_url }}" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	{% include header.html %}
+	<main class="page-content" aria-label="Content">
+		{{ content }}
+	</main>
+	{% include footer.html %}
+	{% include analytics.html %}
+</body>
+</html>
