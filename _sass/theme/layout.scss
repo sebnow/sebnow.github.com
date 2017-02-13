@@ -15,8 +15,11 @@
 		display: inline-block;
 		padding: $spacing-unit;
 		margin-left: $spacing-unit * 4;
-	}
 
+		@include media-query($on-tablet) {
+			margin-left: $spacing-unit;
+		}
+	}
 
 	.home, a .home {
 		color: $brand-color;
