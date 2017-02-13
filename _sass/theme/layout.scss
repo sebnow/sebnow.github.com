@@ -30,13 +30,13 @@
 }
 
 main.page-content {
-	width: $content-width;
+	max-width: $content-width;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 footer {
-	width: $content-width;
+	max-width: $content-width;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
