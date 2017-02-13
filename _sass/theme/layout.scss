@@ -41,9 +41,18 @@ footer {
 	margin-right: auto;
 	text-align: center;
 
-	ul.social-links li {
-		display: inline-block;
+	ul.social-links {
 		margin-left: $spacing-unit;
+		margin-right: $spacing-unit;
+
+		li {
+			display: inline-block;
+			margin-left: $spacing-unit;
+
+			&:first-child {
+				margin-left: 0px;
+			}
+		}
 	}
 }
 
