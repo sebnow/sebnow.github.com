@@ -67,3 +67,13 @@ footer {
 	margin-top: $base-font-size / 2;
 	color: lighten($text-color, 50%);
 }
+
+.post .post-content {
+	p > img:first-child,
+	p > img ~ em {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+}
