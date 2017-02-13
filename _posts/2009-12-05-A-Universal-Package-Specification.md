@@ -1,5 +1,9 @@
 ---
 layout: post
+excerpt: |
+  One of my favourite things about Unix-like operating systems is
+  package management. I discuss the Archlinux PKGBUILD format and
+  propose a new metadata format for packages.
 ---
 One of my favourite things about Unix-like operating systems is package
 management. They have many technical advantages such as:
