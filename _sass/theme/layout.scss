@@ -15,8 +15,11 @@
 		display: inline-block;
 		padding: $spacing-unit;
 		margin-left: $spacing-unit * 4;
-	}
 
+		@include media-query($on-tablet) {
+			margin-left: $spacing-unit;
+		}
+	}
 
 	.home, a .home {
 		color: $brand-color;
@@ -30,31 +33,52 @@
 }
 
 main.page-content {
-	width: $content-width;
+	max-width: $content-width;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 footer {
-	width: $content-width;
+	max-width: $content-width;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 
-	ul.social-links li {
-		display: inline-block;
+	ul.social-links {
 		margin-left: $spacing-unit;
+		margin-right: $spacing-unit;
+
+		li {
+			display: inline-block;
+			margin-left: $spacing-unit;
+
+			&:first-child {
+				margin-left: 0px;
+			}
+		}
 	}
 }
 
 .post-list {
 	list-style-type: none;
 	margin-left: 0px;
-	padding-left: 0px;
+	padding-right: $spacing-unit / 2;
 }
 
 .post-list .post-meta {
 	float: right;
-	margin-top: $base-font-size / 2;
-	color: lighten($text-color, 50%);
+
+	& > p {
+		margin: 0px;
+	}
+}
+
+.post .post-content {
+	p > img:first-child,
+	p > img ~ em {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
 }

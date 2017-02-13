@@ -8,13 +8,11 @@ layout: default
     <ul class="post-list">
         {% for post in site.posts %}
         <li>
+			<h2><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
             <div class="post-meta">
-                <p><time datetime="{{ post.date | date_to_xmlschema  }}">{{ post.date | date: '%B, %d, %Y' }}</time></p>
+				<p><time datetime="{{ post.date | date_to_xmlschema  }}">{{ post.date | date: '%Y/%m/%d' }}</time></p>
             </div>
-
-            <h2>
-                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-            </h2>
+			<p class="post-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
         </li>
         {% endfor %}
     </ul>
