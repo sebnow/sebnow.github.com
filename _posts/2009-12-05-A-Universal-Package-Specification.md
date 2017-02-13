@@ -25,7 +25,7 @@ pleasantly surprised at how simple the [PKGBUILD] format is. It is a shell
 script, in which variables define metadata, and a `build()` function
 specifies the steps required to build the package.
 
-### Problems
+## Problems
 
 The [Archlinux User Repository][AUR] allows users to contribute PKGBUILDs
 without a lengthy review process. The code behind it wasn't in the greatest
@@ -68,7 +68,7 @@ The checksum generation feature of `makepkg` no longer works properly, and in
 order to parse this metadata, an interpreter is now required, not just a
 parser.
 
-### Solutions
+## Solutions
 
 An Archlinux user started defining [an alternate PKGBUILD
 specification][pkgmeta]. It addresses some problems with the shell format,
@@ -92,7 +92,7 @@ languages. Thus, the format should be easily accessible in most languages.
 Unfortunately it does not seem that bash is one of them, so parts of
 `makepkg` would have to be rewritten.
 
-### Suggested Format
+## Suggested Format
 
 {% highlight yaml %}
     name: foo

@@ -52,6 +52,15 @@ h1, h2, h3, h4, h5, h6, p {
 	padding-right: $spacing-unit / 2;
 }
 
+p ~ h1 ,
+p ~ h2 ,
+p ~ h3 ,
+p ~ h4 ,
+p ~ h5 ,
+p ~ h6  {
+	margin-bottom: $spacing-unit;
+}
+
 a {
     color: $brand-color;
     text-decoration: none;
