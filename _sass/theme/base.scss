@@ -111,6 +111,11 @@ figure.highlight, div.highlighter-rouge {
 	@extend %vertical-rhythm;
 	margin-left: $spacing-unit;
 	margin-right: $spacing-unit;
+
+	@include media-query($on-tablet) {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
 }
 
 %clearfix:after {
