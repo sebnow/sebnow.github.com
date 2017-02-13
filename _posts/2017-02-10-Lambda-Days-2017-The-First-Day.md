@@ -14,7 +14,7 @@ conference. She talked about how a one-off comic, portraying Charles
 Babbage and Ada Lovelace, turned into a series, and eventually evolved
 into a very informative graphic novel.
 
-![Analytical Engine]({{ site.url }}/assets/sydney_padua_econ2_008.jpg)  
+![Analytical Engine]({{ site.url }}/assets/sydney_padua_econ2_008.jpg)
 *[Lovelace and Babbage Vs. The Economy, Pt 2][BabbagePt2]*
 
 As Padua made more comics, she learned more about the Babbage's
