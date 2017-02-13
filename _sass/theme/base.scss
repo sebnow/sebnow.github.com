@@ -80,25 +80,28 @@ blockquote {
 }
 
 pre, code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+	font-family: $monospace-font-family;
+	font-size: 15px;
+	border: 2px solid $grey-color-light;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
 }
 
-code {
-    padding: 1px 5px;
-}
 
 pre {
-    padding: 8px 12px;
-    overflow-x: auto;
+	overflow-x: auto;
+	padding: $spacing-unit / 2;
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+	> code {
+		border: 0;
+		padding: 0px;
+	}
+}
+
+figure.highlight, div.highlighter-rouge {
+	@extend %vertical-rhythm;
+	margin-left: $spacing-unit;
+	margin-right: $spacing-unit;
 }
 
 %clearfix:after {

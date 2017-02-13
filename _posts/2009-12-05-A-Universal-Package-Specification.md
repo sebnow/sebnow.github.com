@@ -53,14 +53,16 @@ sources. A binary source is typically different for each supported
 architecture. There is no way of specifying this easily in the PKGBUILD
 format. A common solution is to do something like this:
 
+{% highlight bash %}
     arch=('i686' 'x86_64')
     if [ "$CARCH" = "x86_64" ]; then
         source=("http://foo.com/${pkgname}-${pkgver}-x86_64.bin")
         md5sums=(4dacc4474e93bcd4e168fdc48c4e6aee)
     else
-	    source=("http://foo.com/${pkgname}-${pkgver}-i386.bin")
-	    md5sums=(5001378e4f83d0d6db014eec9182f7b4)
+        source=("http://foo.com/${pkgname}-${pkgver}-i386.bin")
+        md5sums=(5001378e4f83d0d6db014eec9182f7b4)
     fi
+{% endhighlight %}
 
 The checksum generation feature of `makepkg` no longer works properly, and in
 order to parse this metadata, an interpreter is now required, not just a
