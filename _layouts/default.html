@@ -4,6 +4,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+	{% include gtm_head.html %}
 	<link href="{{ page.url | replace:'index.html','' | absolute_url }}" rel="canonical" />
 	<link href="//brick.a.ssl.fastly.net/Heuristica:400,700/Raleway:400,400i,700" rel="stylesheet" />
 	<link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet"
@@ -13,6 +14,7 @@
 	<link href="{{ "/assets/main.css" | relative_url }}" type="text/css" rel="stylesheet" />
 </head>
 <body>
+	{% include gtm_body.html %}
 	{% include header.html %}
 	<main class="page-content" aria-label="Content">
 		{{ content }}
