@@ -62,13 +62,15 @@ footer {
 .post-list {
 	list-style-type: none;
 	margin-left: 0px;
-	padding-left: 0px;
+	padding-right: $spacing-unit / 2;
 }
 
 .post-list .post-meta {
 	float: right;
-	margin-top: $base-font-size / 2;
-	color: lighten($text-color, 50%);
+
+	& > p {
+		margin: 0px;
+	}
 }
 
 .post .post-content {
