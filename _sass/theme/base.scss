@@ -26,6 +26,7 @@ img {
 
 ul, ol {
     margin-left: $spacing-unit;
+	padding-left: $spacing-unit / 2;
 }
 
 li {
@@ -39,6 +40,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font-family;
     font-weight: $base-font-weight * 1.75;
 	font-size: 175%;
+    margin-bottom: ($spacing-unit * 1.75) / 2;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	padding-left: $spacing-unit / 2;
+	padding-right: $spacing-unit / 2;
 }
 
 a {
