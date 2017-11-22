@@ -7,13 +7,8 @@
 	<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 	{% include gtm_head.html %}
 	<link href="{{ page.url | replace:'index.html','' | absolute_url }}" rel="canonical" />
-	<link href="//brick.a.ssl.fastly.net/Heuristica:400,700/Raleway:400,400i,700/Inconsolata:500:f" rel="stylesheet" />
-	<link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet"
-		integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU"
-		crossorigin="anonymous" />
 	<link href="{{ "/favicon.ico" | relative_url }}" rel="icon" type="image/x-icon" />
 	<link title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}" type="application/rss+xml" rel="alternate" />
-	<link href="{{ "/assets/main.css" | relative_url }}" type="text/css" rel="stylesheet" />
 </head>
 <body>
 	{% include gtm_body.html %}
@@ -23,5 +18,10 @@
 	</main>
 	{% include footer.html %}
 	{% include analytics.html %}
+	<link href="{{ "/assets/main.css" | relative_url }}" type="text/css" rel="stylesheet" />
+	<link href="//brick.a.ssl.fastly.net/Heuristica:400,700/Raleway:400,400i,700/Inconsolata:500:f" rel="stylesheet" />
+	<link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU"
+		crossorigin="anonymous" />
 </body>
 </html>
