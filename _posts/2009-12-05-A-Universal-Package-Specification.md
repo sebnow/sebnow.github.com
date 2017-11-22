@@ -53,16 +53,16 @@ sources. A binary source is typically different for each supported
 architecture. There is no way of specifying this easily in the PKGBUILD
 format. A common solution is to do something like this:
 
-{% highlight bash %}
-    arch=('i686' 'x86_64')
-    if [ "$CARCH" = "x86_64" ]; then
-        source=("http://foo.com/${pkgname}-${pkgver}-x86_64.bin")
-        md5sums=(4dacc4474e93bcd4e168fdc48c4e6aee)
-    else
-        source=("http://foo.com/${pkgname}-${pkgver}-i386.bin")
-        md5sums=(5001378e4f83d0d6db014eec9182f7b4)
-    fi
-{% endhighlight %}
+```bash
+arch=('i686' 'x86_64')
+if [ "$CARCH" = "x86_64" ]; then
+	source=("http://foo.com/${pkgname}-${pkgver}-x86_64.bin")
+	md5sums=(4dacc4474e93bcd4e168fdc48c4e6aee)
+else
+	source=("http://foo.com/${pkgname}-${pkgver}-i386.bin")
+	md5sums=(5001378e4f83d0d6db014eec9182f7b4)
+fi
+```
 
 The checksum generation feature of `makepkg` no longer works properly, and in
 order to parse this metadata, an interpreter is now required, not just a
@@ -94,57 +94,57 @@ Unfortunately it does not seem that bash is one of them, so parts of
 
 ## Suggested Format
 
-{% highlight yaml %}
-    name: foo
-    version: 1.0
-    release: 1
-    summary: A fictional package to show the YAML package format
-    description: >
-      This package is an example of the YAML universal package format, which
-      aims to be portable and extandable. This description can be as long as
-      it needs to be.
-    architectures: # Keys denote architectures supported by this package
-      any:
-        sources: # URIs of source files, such as a source tarball
-          - uri: http://www.foo.org/{{name}}-{{version}}.tar.gz
-            checksums: # keys denote algorithm, values are the checksums
-              md5: fd085a845298afb36f6676feac855e63
-              sha1: e19f73b340aeae43b98908006094af62e0c7b5b9
-          - uri: shared_data-{{version}}.tar.gz
-            checksums:
-              md5: 2edd3a155dcbb6632029accd2926d33b
-              sha1: 776b13c7ff8e8b120a1ea4910a8b8b64c289e6b6
-            extract: Yes # Whether an archive should be extracted
-    icon: foo.png # An icon for GUI package managers
-    licenses: [MIT]
-    url: http://www.foo.org
-    categories: [fictional, example] # Keywords associated with this package
-    distributions: null # Allows to install a group of packages as a single
-                        # target
-    requires:
-      - bar >= 2.1
-      - eggs == 1.1.2
-    provides:
-      - example
-    conflicts:
-      - foobar
-    optional: # Keys denote optional packages, values describe why they are
-              # optional and what features they provide
-      - eggs: To make a nice omelette
-      - spam: If you like that sort of thing...
-    extensions: # User-defined data
-      # The following is metadata used by makepkg, but not used by other
-      # common package managers.
-      options: [trip, "!docs", libtool, emptydirs, zipman]
-      backup:
-        - /etc/foo.rc
-      install: foo.install
-      build: |
-        ./configure --prefix=/usr
-        make
-        make DESTDIR=$pkgdir install
-    ...
-{% endhighlight %}
+```yaml
+name: foo
+version: 1.0
+release: 1
+summary: A fictional package to show the YAML package format
+description: >
+  This package is an example of the YAML universal package format, which
+  aims to be portable and extandable. This description can be as long as
+  it needs to be.
+architectures: # Keys denote architectures supported by this package
+  any:
+    sources: # URIs of source files, such as a source tarball
+      - uri: http://www.foo.org/{{name}}-{{version}}.tar.gz
+        checksums: # keys denote algorithm, values are the checksums
+          md5: fd085a845298afb36f6676feac855e63
+          sha1: e19f73b340aeae43b98908006094af62e0c7b5b9
+      - uri: shared_data-{{version}}.tar.gz
+        checksums:
+          md5: 2edd3a155dcbb6632029accd2926d33b
+          sha1: 776b13c7ff8e8b120a1ea4910a8b8b64c289e6b6
+        extract: Yes # Whether an archive should be extracted
+icon: foo.png # An icon for GUI package managers
+licenses: [MIT]
+url: http://www.foo.org
+categories: [fictional, example] # Keywords associated with this package
+distributions: null # Allows to install a group of packages as a single
+                    # target
+requires:
+  - bar >= 2.1
+  - eggs == 1.1.2
+provides:
+  - example
+conflicts:
+  - foobar
+optional: # Keys denote optional packages, values describe why they are
+          # optional and what features they provide
+  - eggs: To make a nice omelette
+  - spam: If you like that sort of thing...
+extensions: # User-defined data
+  # The following is metadata used by makepkg, but not used by other
+  # common package managers.
+  options: [trip, "!docs", libtool, emptydirs, zipman]
+  backup:
+    - /etc/foo.rc
+  install: foo.install
+  build: |
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$pkgdir install
+#...
+```
 
 Most of these fields are analogous to those in the current PKGBUILD format.
 The major difference is with `architectures`. The keys of this hash table
@@ -156,16 +156,16 @@ error. There is still one problem with this, however. If the sources do not
 differ for multiple architectures, there will be duplication. To rectify this
 to some degree, anchors can be used:
 
-{% highlight yaml %}
-    architectures:
-      i686: &common_sources
-        sources:
-          - uri: http://www.foo.org/{{name}}-{{version}}.tar.gz
-            checksums:
-              md5: fd085a845298afb36f6676feac855e63
-              sha1: e19f73b340aeae43b98908006094af62e0c7b5b9
-      x86_64: *common_sources
-{% endhighlight %}
+```yaml
+architectures:
+  i686: &common_sources
+    sources:
+      - uri: http://www.foo.org/{{name}}-{{version}}.tar.gz
+        checksums:
+          md5: fd085a845298afb36f6676feac855e63
+          sha1: e19f73b340aeae43b98908006094af62e0c7b5b9
+  x86_64: *common_sources
+```
 
 In some cases it might even be useful to exploit hash merges to specify a
 common subset of sources and add architecture-specific ones.
@@ -173,17 +173,17 @@ common subset of sources and add architecture-specific ones.
 Another re-use of data was common in PKGBUILDs - using variables to reference
 the package name and version in sources. It looked something like this:
 
-{% highlight bash %}
-    pkgname="foo"
-    pkgver=1.0
-    source=("http://foo.org/${pkgname}-${pkgver}.tar.gz")
-{% endhighlight %}
+```bash
+pkgname="foo"
+pkgver=1.0
+source=("http://foo.org/${pkgname}-${pkgver}.tar.gz")
+```
 
 You might have noticed that a similar syntax was used in the uri:
 
-{% highlight bash %}
-    - uri: "http://www.foo.org/${name}-${version}.tar.gz"
-{% endhighlight %}
+```bash
+- uri: "http://www.foo.org/${name}-${version}.tar.gz"
+```
 
 This is not something that YAML supports - it would have to be parsed
 separately. I have not decided on this format yet, and perhaps YAML does
