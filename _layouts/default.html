@@ -3,12 +3,11 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip }}">
 	<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 	{% include gtm_head.html %}
-	<link href="{{ page.url | replace:'index.html','' | absolute_url }}" rel="canonical" />
 	<link href="{{ "/favicon.ico" | relative_url }}" rel="icon" type="image/x-icon" />
 	<link title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}" type="application/rss+xml" rel="alternate" />
+	{% seo title=false %}
 </head>
 <body>
 	{% include gtm_body.html %}

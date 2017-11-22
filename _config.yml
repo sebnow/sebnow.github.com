@@ -3,10 +3,16 @@ permalink: /posts/:year/:month/:day/:title
 url: http://blog.sebnow.co
 
 title: "Sebastian Nowicki's Blog"
-author: Sebastian Nowicki
 description: "Thoughts about junk and stuff, or, whatever."
-github_username: sebnow
-twitter_username: sebnow
+author:
+    name: Sebastian Nowicki
+    twitter: sebnow
+    github: sebnow
+
+social:
+  links:
+    - https://twitter.com/sebnow
+    - https://github.com/sebnow
 
 disqus:
     shortname: sebastiannowicki
@@ -15,4 +21,5 @@ gtm_container_id: GTM-MDS722W
 
 gems:
     - jekyll-feed
+    - jekyll-seo-tag
     - jekyll-sitemap
