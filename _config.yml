@@ -5,14 +5,11 @@ url: http://blog.sebnow.co
 title: "Sebastian Nowicki's Blog"
 description: "Thoughts about junk and stuff, or, whatever."
 author:
-    name: Sebastian Nowicki
-    twitter: sebnow
-    github: sebnow
-
-social:
-  links:
-    - https://twitter.com/sebnow
-    - https://github.com/sebnow
+  name: Sebastian Nowicki
+  twitter: sebnow
+  github: sebnow
+twitter:
+  username: sebnow
 
 disqus:
     shortname: sebastiannowicki
