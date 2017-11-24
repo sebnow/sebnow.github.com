@@ -8,11 +8,11 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     $base-font-size * $base-line-height !default;
 
-$text-color:       #282a2e !default;
-$background-color: #f5f5f5 !default;
-$secondary-color:  #b5bd68 !default;
-$brand-color:      #81a2be !default;
-$secondary-background-color: #282a2e !default;
+$text-color:       #000000 !default;
+$background-color: #ffffff !default;
+$secondary-color:  #f7f7f7 !default;
+$brand-color:      #005cbb !default;
+$secondary-background-color: #005cbb !default;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
