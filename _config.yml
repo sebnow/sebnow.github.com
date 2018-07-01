@@ -14,6 +14,7 @@ twitter:
 disqus:
     shortname: sebastiannowicki
 gtm_container_id: GTM-MDS722W
+adsense_client: ca-pub-1110331206949996
 
 gems:
     - jekyll-feed

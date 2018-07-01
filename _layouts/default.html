@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 	{% include gtm_head.html %}
+	{% include adsense.html %}
 	<link href="{{ "/favicon.ico" | relative_url }}" rel="icon" type="image/x-icon" />
 	<link title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}" type="application/rss+xml" rel="alternate" />
 	{% seo title=false %}
