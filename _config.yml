@@ -1,6 +1,6 @@
 destination: ./_site
 permalink: /posts/:year/:month/:day/:title
-url: http://blog.sebnow.co
+url: https://blog.sebnow.co
 
 title: "Sebastian Nowicki's Blog"
 description: "Thoughts about junk and stuff, or, whatever."
