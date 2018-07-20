@@ -1,8 +1,4 @@
 <header id="header">
-	<h1>{{ site.title }}</h1>
-	<nav>
-		<ul>
-			<li><a href="{{ site.url }}"><span class="fa fa-home" aria-hidden="true"></span>Blog</a></li>
-		</ul>
-	</nav>
+	<h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+	{% include social.html %}
 </header>

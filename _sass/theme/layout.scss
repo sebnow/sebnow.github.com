@@ -1,55 +1,28 @@
-#header h1 {
-	display: none
-}
-
 #header {
-	font-size: 125%;
-}
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: $base-font-size 2*$base-font-size;
+	margin-bottom: 2em;
 
-#header nav {
-	position: absolute;
-	top: 1em;
-	right: 1em;
-	font-family: $heading-font-family;
+	h1 {
+		padding: 0;
+		margin: 0;
+	}
 
-	ul {
-		list-style-type: none;
-		margin: 0px;
-		padding: 0px;
+	.social-links {
+		margin: 0;
 
-		li {
-			margin-top: $spacing-unit / 4;
-			border-radius: 50%;
-			background-color: $secondary-background-color;
-			opacity: 0.75;
-			transition: opacity 0.3s;
+		a {
+			font-size: 0;
 
-			&:hover {
-				opacity: 1;
-			}
-
-			&:first-child {
-				margin-top: 0px;
-			}
-
-			a {
-				color: $secondary-color;
-				font-size: 0px;
-				display: block;
-				padding: $base-font-size / 2;
-				text-align: center;
-			}
-
-			.fa {
-				font-size: $base-font-size * 2;
+			.fab, .fa {
+				font-size: 24px;
 			}
 		}
 	}
 }
 
-main h1 {
-	margin-top: $spacing-unit;
-}
 
 main.page-content {
 	max-width: $content-width;
@@ -61,19 +34,20 @@ footer {
 	max-width: $content-width;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 5em;
 	text-align: center;
+}
 
-	ul.social-links {
+ul.social-links {
+	margin-left: $spacing-unit;
+	margin-right: $spacing-unit;
+
+	li {
+		display: inline-block;
 		margin-left: $spacing-unit;
-		margin-right: $spacing-unit;
 
-		li {
-			display: inline-block;
-			margin-left: $spacing-unit;
-
-			&:first-child {
-				margin-left: 0px;
-			}
+		&:first-child {
+			margin-left: 0px;
 		}
 	}
 }

@@ -1,0 +1,15 @@
+<ul class="social-links">
+	<li><a href="{{ "/feed.xml" | relative_url }}" class="rss-subscribe">
+			<span class="fa fa-rss" aria-hidden="true"></span> RSS
+	</a></li>
+	{% if site.author.github %}
+	<li><a href="https://github.com/{{ site.author.github }}" class="github">
+			<span class="fab fa-github" aria-hidden="true"></span> {{ site.author.github }}
+	</a></li>
+	{% endif %}
+	{% if site.author.twitter %}
+	<li><a href="https://www.twitter.com/{{ site.author.twitter }}" class="twitter">
+			<span class="fab fa-twitter" aria-hidden="true"></span> @{{ site.author.twitter }}
+	</a></li>
+	{% endif %}
+</ul>

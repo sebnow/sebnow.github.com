@@ -1,22 +1,27 @@
 $heading-font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-family: "Heuristica", "Droid Serif", serif;
+$base-font-family: "Lato", "Open Sans", sans-serif;
 $monospace-font-family: "Inconsolata", monospace;
-$base-font-size:   16px !default;
+$base-font-size:   14px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
 $spacing-unit:     $base-font-size * $base-line-height !default;
 
-$text-color:       #000000 !default;
-$background-color: #ffffff !default;
-$secondary-color:  #f7f7f7 !default;
-$brand-color:      #005cbb !default;
-$secondary-background-color: #005cbb !default;
+$lime-primary: #CCFF00;
+$lime-shade: darken($lime-primary, 40%);
+$lime-tint: lighten($lime-primary, 40%);
+$purple-primary: #652DC1;
+$purple-secondary: #b02dc1;
+$purple-shade: darken($purple-primary, 40%);
+$purple-tint: lighten($purple-primary, 40%);
+$black: #222222;
+$black-tint: lighten($black, 40%);
+$white: #FCFCFC;
+$white-shade: darken($white, 40%);
 
-$grey-color:       #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+$text-color:       $black !default;
+$background-color: $white !default;
 
 $content-width:    800px !default;
 

@@ -12,6 +12,34 @@ body {
     font-kerning: normal;
 }
 
+#header {
+	background-color: $black;
+	border-bottom: 0.5em solid $lime-primary;
+	color: $white;
+
+	h1 {
+		font-family: $monospace-font-family;
+		font-size: 32px;
+		a {
+			color: $white;
+		}
+	}
+
+	h1:first-letter {
+		color: $lime-primary;
+	}
+
+	.social-links {
+		.fa, .fab {
+			color: $white-shade;
+		}
+
+		a:hover .fa, a:hover .fab {
+			color: $lime-primary;
+		}
+	}
+}
+
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
@@ -68,22 +96,22 @@ p ~ h6  {
 }
 
 a {
-    color: $brand-color;
+    color: $purple-primary;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $purple-secondary,
     }
 
     &:hover {
-        color: $text-color;
+		color: $purple-secondary;
         text-decoration: underline;
     }
 }
 
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    color: $black-tint;
+    border-left: 4px solid $black-tint;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
     letter-spacing: -1px;
@@ -97,7 +125,7 @@ blockquote {
 pre, code {
 	font-family: $monospace-font-family;
 	font-size: 15px;
-	border: 2px solid $grey-color-light;
+	border: 2px solid $black-tint;
 	padding-left: 0.25em;
 	padding-right: 0.25em;
 }
@@ -135,11 +163,11 @@ figure.highlight, div.highlighter-rouge {
     vertical-align: middle;
 
     path {
-        fill: $grey-color;
+        fill: $black-tint;
     }
 }
 
 .post-list .post-meta {
 	font-size: $small-font-size;
-	color: lighten($text-color, 50%);
+	color: $black-tint;
 }
