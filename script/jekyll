@@ -4,5 +4,5 @@ root=$(cd $(dirname $0)/..; pwd)
 docker run --rm \
   --volume="$root:/srv/jekyll" \
   -p 4000:4000 \
-  -it jekyll/jekyll:latest \
+  -it jekyll/jekyll:3 \
   jekyll $@
