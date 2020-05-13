@@ -1,7 +1,7 @@
 ---
 layout: post
 title: NeoVim - A Clean Slate
-categories: [neovim, vim]
+categories: [tech]
 ---
 
 According to [Git][initial_commit], my vimrc is twelve years old, and

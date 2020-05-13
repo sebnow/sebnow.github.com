@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lambda Days 2017 - The First Day
-categories: [conference]
+categories: [tech]
 ---
 
 The day kicked off with a Keynote from John Hughes, who provided an
