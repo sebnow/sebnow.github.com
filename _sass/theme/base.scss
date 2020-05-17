@@ -100,12 +100,12 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: $purple-secondary,
+        color: $purple-shade,
     }
 
     &:hover {
-		color: $purple-secondary;
-        text-decoration: underline;
+		color: $purple-tint;
+		text-decoration: underline;
     }
 }
 
@@ -177,11 +177,3 @@ figure.highlight, div.highlighter-rouge {
 	}
 }
 
-.c-snipppet__header {
-	@extend %inverted;
-
-	padding: $spacing-unit / 2;
-	margin-left: $spacing-unit;
-	margin-right: $spacing-unit;
-	font-size: $small-font-size;
-}

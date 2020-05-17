@@ -75,3 +75,10 @@ ul.social-links {
 		text-align: center;
 	}
 }
+
+.c-snipppet__header {
+	padding: $spacing-unit / 2;
+	margin-left: $spacing-unit;
+	margin-right: $spacing-unit;
+	font-size: $small-font-size;
+}

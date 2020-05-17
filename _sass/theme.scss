@@ -1,24 +1,25 @@
 $heading-font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-family: "Lato", "Open Sans", sans-serif;
 $monospace-font-family: "Inconsolata", monospace;
-$base-font-size:   14px !default;
+$base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
 $spacing-unit:     $base-font-size * $base-line-height !default;
 
-$lime-primary: #CCFF00;
+$lime-primary: #B7E63E;
 $lime-shade: darken($lime-primary, 40%);
 $lime-tint: lighten($lime-primary, 40%);
-$purple-primary: #652DC1;
-$purple-secondary: #b02dc1;
-$purple-shade: darken($purple-primary, 40%);
-$purple-tint: lighten($purple-primary, 40%);
-$black: #222222;
-$black-tint: lighten($black, 40%);
+$purple-primary: #8062CE;
+$purple-shade: scale-color($purple-primary, $lightness: -40%);
+$purple-tint: scale-color($purple-primary, $lightness: 20%);
+$teal-primary: #36AE94;
+$red-primary: #DD5472;
+$black: change-color($purple-primary, $lightness: 10%);
+$black-tint: scale-color($black, $lightness: 20%);
 $white: #FCFCFC;
-$white-shade: darken($white, 40%);
+$white-shade: scale-color($white, $lightness: -20%);
 
 $text-color:       $black !default;
 $background-color: $white !default;
