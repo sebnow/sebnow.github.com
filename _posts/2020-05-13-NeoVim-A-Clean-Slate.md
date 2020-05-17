@@ -21,6 +21,9 @@ of Vim. NeoVim 0.5 provides a fantastic foundation for achieving this,
 with a native LSP client, Lua support, a built in terminal, and
 asynchronous jobs.
 
+To start off, I've removed all but the most [minimal
+settings][clean_commit] to make NeoVim usable for me.
+
 The ecosystem around the LSP client is still maturing, as 0.5 is yet to
 be released, but it's starting to become viable as a daily driver.
 
@@ -45,9 +48,7 @@ a consistent way. I haven't used it previously, mostly due to the
 dependency on Python, but using it will remove the need for other
 plugins such as [ctrlp.vim][], [fzf.vim][], [vim-clap][], etc.
 
-To start off, I've removed all but the most
-[minimal settings][clean_commit] to make NeoVim usable for me. I will be
-elaborating on specific parts of my set up in future posts.
+I will be elaborating on specific parts of my set up in future posts.
 
 [coc]: https://github.com/neoclide/coc.nvim
 [ctrlp.vim]: https://github.com/kien/ctrlp.vim

@@ -124,8 +124,7 @@ blockquote {
 
 pre, code {
 	font-family: $monospace-font-family;
-	font-size: 15px;
-	border: 2px solid $black-tint;
+
 	padding-left: 0.25em;
 	padding-right: 0.25em;
 }
@@ -170,4 +169,19 @@ figure.highlight, div.highlighter-rouge {
 .post-list .post-meta {
 	font-size: $small-font-size;
 	color: $black-tint;
+}
+
+.github-sample-reference {
+	.author-info {
+		display: none;
+	}
+}
+
+.c-snipppet__header {
+	@extend %inverted;
+
+	padding: $spacing-unit / 2;
+	margin-left: $spacing-unit;
+	margin-right: $spacing-unit;
+	font-size: $small-font-size;
 }
