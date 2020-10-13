@@ -7,6 +7,7 @@ dl, dd, ol, ul, figure {
 
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    font-display: swap;
     color: $text-color;
     background-color: $background-color;
     font-kerning: normal;
@@ -19,6 +20,7 @@ body {
 
 	h1 {
 		font-family: $monospace-font-family;
+		font-display: swap;
 		font-size: 32px;
 		a {
 			color: $white;
@@ -78,6 +80,7 @@ h6 { font-size: 110%; }
 h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font-family;
     font-weight: $base-font-weight * 1.75;
+    font-display: swap;
     margin-bottom: ($spacing-unit * 1.75) / 2;
 }
 
@@ -124,6 +127,7 @@ blockquote {
 
 pre, code {
 	font-family: $monospace-font-family;
+	font-display: swap;
 
 	padding-left: 0.25em;
 	padding-right: 0.25em;
