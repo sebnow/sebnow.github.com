@@ -1,6 +1,6 @@
 destination: ./_site
 permalink: /posts/:year/:month/:day/:title
-url: https://blog.sebnow.co
+url: https://blog.sebnow.com
 
 title: "slog"
 description: "Thoughts about junk and stuff, or, whatever."
